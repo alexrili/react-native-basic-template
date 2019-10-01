@@ -3,16 +3,16 @@ import { Provider } from "react-redux";
 import { ThemeProvider } from 'styled-components/native'
 import theme from 'styles/colors';
 import Routes from "routes";
-import { SafeAreaView } from './styles'
+import { PageContainer } from 'components'
 
 import store from "store"
 
 export default () => (
     <ThemeProvider theme={theme}>
         <Provider store={store}>
-            <SafeAreaView>
+            <PageContainer>
                 <Routes />
-            </SafeAreaView>
+            </PageContainer>
         </Provider>
     </ThemeProvider>
 )
